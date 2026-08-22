@@ -1,39 +1,75 @@
+````markdown
+**# Architecture - FinanceBook**
 
-# Architecture — FinanceBook
+**## 1. Visão Geral**
 
-## 1. Visão Geral
+O **FinanceBook** será desenvolvido como uma aplicação web responsiva para organização financeira pessoal e acompanhamento do mercado financeiro.
 
-O FinanceBook será desenvolvido como uma aplicação web responsiva, utilizando tecnologias de frontend e APIs para manipulação e consulta de dados.
+A aplicação utilizará **HTML5, CSS3, Bootstrap, Sass, JavaScript e jQuery**, além do **JSON Server** para persistência dos dados e uma API pública para informações financeiras.
 
-A aplicação será responsável por apresentar as interfaces, receber informações do usuário, validar formulários, realizar operações de cadastro e consumir serviços externos.
+**---**
 
-A arquitetura será organizada de forma modular, permitindo separar responsabilidades entre páginas, componentes, serviços, estilos e funções auxiliares.
+**## 2. Estrutura do Projeto**
 
----
+```text
+FinanceBook/
+│
+├── index.html
+├── pages/
+│   ├── gastos.html
+│   ├── investimentos.html
+│   └── mercado.html
+│
+├── css/
+│   └── style.scss
+├── js/
+│   ├── main.js
+│   ├── gastos.js
+│   ├── investimentos.js
+│   └── mercado.js
+│
+├── data/
+│   └── db.json
+│
+└── docs/
+````
 
-## 2. Arquitetura da Aplicação
+**---**
 
-```mermaid
-flowchart TD
+**## 3. Modelo de Dados**
 
-    U[Usuário]
+O **JSON Server** será utilizado para armazenar os dados principais da aplicação.
 
-    U --> F[Frontend]
+As principais entidades serão:
 
-    F --> D[Dashboard]
-    F --> G[Gastos]
-    F --> I[Investimentos]
-    F --> M[Mercado]
+* **Usuário:** dados básicos do usuário.
+* **Gasto:** descrição, valor, categoria e data.
+* **Investimento:** ativo, tipo, quantidade, valor e data.
 
-    D --> JS[JavaScript / jQuery]
-    G --> JS
-    I --> JS
-    M --> JS
+**---**
 
-    JS --> WS[Web Storage]
+**## 4. Comunicação**
 
-    JS --> JSON[JSON Server]
-    JS --> API[API Pública]
+O sistema utilizará requisições assíncronas para comunicação entre o Frontend e os serviços externos.
 
-    JSON --> DB[(Dados Financeiros)]
-    API --> MF[Dados do Mercado]
+* **JSON Server:** armazenamento e gerenciamento dos gastos e investimentos.
+* **API Pública:** consulta de informações do mercado financeiro.
+
+**---**
+
+**## 5. Tecnologias**
+
+* **HTML5:** estrutura das páginas.
+* **Bootstrap:** layout responsivo.
+* **Sass/CSS3:** estilização.
+* **JavaScript/jQuery:** lógica e interatividade.
+* **JSON Server:** persistência dos dados.
+* **Node.js/NPM:** gerenciamento do projeto.
+
+**---**
+
+**## 6. Execução e Versionamento**
+
+O projeto será executado localmente utilizando **Node.js, NPM e JSON Server**.
+
+O código será versionado utilizando **Git** e hospedado no **GitHub**.
