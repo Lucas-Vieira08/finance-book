@@ -2,8 +2,10 @@
 
 ## 👤 Identificação
 
-**Aluno:** Lucas Vieira
-**Projeto:** FinanceBook — Livro Financeiro
+**Aluno:** Lucas Vieira  
+
+**Projeto:** FinanceBook — Livro Financeiro  
+
 **Tema:** Organização financeira pessoal e acompanhamento do mercado financeiro
 
 ---
@@ -22,7 +24,7 @@ O FinanceBook possui caráter exclusivamente informativo e organizacional. A apl
 
 ## 🎨 Prototipação
 
-**Figma/Stitch:** A definir
+**Figma/Stitch:** Sera usado primeiramente Stitch para uma prototipação inicial, depois o projeto será refinado usando o figma, para alterações mais específicas
 
 ---
 
@@ -38,7 +40,7 @@ O FinanceBook possui caráter exclusivamente informativo e organizacional. A apl
 
 ---
 
-## 📦 Dependências
+## 📦Tecnologias e Dependências
 
 As principais tecnologias e bibliotecas previstas para o projeto são:
 
@@ -122,18 +124,3 @@ Inicialmente, o projeto será executado localmente utilizando um servidor HTTP e
 
 As imagens das telas serão adicionadas durante o desenvolvimento da aplicação.
 
-### Dashboard
-
-A definir.
-
-### Gastos
-
-A definir.
-
-### Investimentos
-
-A definir.
-
-### Mercado
-
-A definir.
