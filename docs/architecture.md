@@ -1,61 +1,89 @@
-# Architecture - FinanceBook
+# 🛠️ Especificação Técnica (Tech Spec) - FinanceBook
 
-## 1. Visão Geral
+Este documento descreve o modelo de dados da aplicação **FinanceBook — Livro Financeiro**.
 
-O **FinanceBook — Livro Financeiro** será desenvolvido como uma aplicação web responsiva para organização das finanças pessoais e acompanhamento do mercado financeiro.
+## 1. Modelo de Dados (Diagrama ER)
 
-A aplicação utilizará **HTML5, CSS3, Bootstrap, Sass, JavaScript e jQuery**, além do **JSON Server** para persistência dos dados e uma API pública para informações financeiras.
+Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura do FinanceBook.
 
----
+```mermaid
+erDiagram
+    USUARIO ||--o{ GASTO : "possui"
+    USUARIO ||--o{ INVESTIMENTO : "possui"
 
-## 2. Estrutura do Projeto
+    USUARIO {
+        string id PK "Identificador único do usuário"
+        string nome "Nome completo ou nome de usuário"
+        string email "Endereço de e-mail"
+        string senha "Credencial de acesso"
+    }
 
-A aplicação será organizada de forma modular, separando páginas, estilos, scripts, dados e documentação.
+    GASTO {
+        string id PK "Identificador único do gasto"
+        string usuarioId FK "Referência ao usuário responsável"
+        string descricao "Descrição do gasto"
+        number valor "Valor do gasto"
+        string categoria "Categoria do gasto"
+        string data "Data em que o gasto ocorreu"
+    }
 
-- **pages:** páginas de Gastos, Investimentos e Mercado.
-- **css:** arquivos de estilização.
-- **js:** scripts e funcionalidades.
-- **data:** arquivo utilizado pelo JSON Server.
-- **docs:** documentação do projeto.
+    INVESTIMENTO {
+        string id PK "Identificador único do investimento"
+        string usuarioId FK "Referência ao usuário responsável"
+        string ativo "Nome ou código do ativo"
+        string tipo "Tipo de investimento"
+        number quantidade "Quantidade de ativos"
+        number valor "Valor investido"
+        string data "Data do investimento"
+    }
+```
 
----
+O **Usuário** possui seus registros de **Gastos** e **Investimentos**. Cada gasto e investimento é vinculado a um usuário por meio do campo `usuarioId`.
 
-## 3. Modelo de Dados
+As informações do **Mercado Financeiro**, como Dólar, Ibovespa e Petróleo, não serão armazenadas no banco de dados. Esses dados serão obtidos por meio de uma **API pública externa** e apresentados na aplicação.
 
-O **JSON Server** será utilizado para armazenar os principais dados da aplicação.
+## 2. Dicionário de Dados
 
-As principais entidades serão:
+Breve explicação das tabelas principais:
 
-- **Usuário:** dados básicos do usuário.
-- **Gasto:** descrição, valor, categoria e data.
-- **Investimento:** ativo, tipo, quantidade, valor e data.
+- **Usuário:** responsável por armazenar os dados básicos do usuário.
+  - `id`: identificador único do usuário.
+  - `nome`: nome completo ou nome utilizado pelo usuário.
+  - `email`: endereço de e-mail utilizado para identificação do usuário.
+  - `senha`: senha utilizada para autenticação.
 
----
+- **Gasto:** responsável pelo registro das despesas do usuário.
+  - `id`: identificador único do gasto.
+  - `usuarioId`: referência ao usuário responsável pelo registro.
+  - `descricao`: descrição do gasto. Exemplo: **"Supermercado"**.
+  - `valor`: valor monetário do gasto.
+  - `categoria`: categoria do gasto. Exemplos: **alimentação, transporte, moradia e lazer**.
+  - `data`: data em que o gasto foi realizado.
 
-## 4. Comunicação
+- **Investimento:** responsável pelo registro dos investimentos realizados pelo usuário.
+  - `id`: identificador único do investimento.
+  - `usuarioId`: referência ao usuário responsável pelo registro.
+  - `ativo`: nome ou código do ativo. Exemplos: **PETR4, VALE3 ou BTC**.
+  - `tipo`: tipo de investimento. Exemplos: **ações, renda fixa, fundos ou criptomoedas**.
+  - `quantidade`: quantidade de ativos adquiridos.
+  - `valor`: valor investido na operação.
+  - `data`: data em que o investimento foi realizado.
 
-O sistema realizará requisições assíncronas utilizando **JavaScript/jQuery**.
+- **Mercado Financeiro:** responsável pela apresentação de informações obtidas por meio de uma **API pública**.
+  - **Dólar:** cotação atual do dólar.
+  - **Ibovespa:** pontuação ou valor atual do índice Ibovespa.
+  - **Petróleo:** cotação atual do petróleo.
 
-- **JSON Server:** responsável pelo armazenamento e gerenciamento dos dados.
-- **API Pública:** responsável pelo fornecimento de informações do mercado financeiro.
+## 3. Versões das Tecnologias
 
----
-
-## 5. Tecnologias
-
-- **HTML5:** estrutura das páginas.
-- **Bootstrap:** criação de layouts responsivos.
-- **CSS3/Sass:** estilização da aplicação.
-- **JavaScript/jQuery:** lógica e interatividade.
-- **JSON Server:** persistência dos dados.
-- **Node.js/NPM:** gerenciamento do projeto.
-
----
-
-## 6. Execução e Versionamento
-
-O projeto será executado localmente utilizando **Node.js, NPM e JSON Server**.
-
-O código será versionado utilizando **Git** e hospedado no **GitHub**.
-
-As instruções de instalação e execução serão documentadas no arquivo **README.md**.
+- **HTML5**
+- **CSS3**
+- **Bootstrap:** v5.3.8
+- **Sass**
+- **JavaScript**
+- **jQuery**
+- **JSON Server**
+- **Node.js**
+- **NPM**
+- **Git**
+- **GitHub**
