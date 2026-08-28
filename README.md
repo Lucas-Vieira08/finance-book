@@ -6,7 +6,7 @@
 
 **Projeto:** FinanceBook — Livro Financeiro  
 
-**Tema:** Organização financeira pessoal e acompanhamento do mercado financeiro
+**Tema:** Organização financeira pessoal
 
 ---
 
@@ -14,9 +14,11 @@
 
 O **FinanceBook** é uma aplicação web responsiva desenvolvida para auxiliar na organização e no acompanhamento das finanças pessoais.
 
-A aplicação permitirá que o usuário registre seus gastos, acompanhe seus investimentos e visualize um resumo de sua situação financeira. Além disso, o sistema contará com uma área dedicada ao acompanhamento do mercado financeiro, apresentando indicadores como cotação do dólar, Ibovespa e petróleo, juntamente com notícias relevantes do cenário econômico.
+A aplicação permitirá que o usuário registre seus **gastos e investimentos**, visualize seus registros e acompanhe um resumo de sua situação financeira.
 
-O objetivo é centralizar informações financeiras pessoais e informações do mercado em uma única aplicação, permitindo que o usuário tenha uma visão mais clara de seu dinheiro e do contexto econômico ao seu redor.
+Na área de investimentos, o sistema utilizará uma **API pública de cotações** para obter informações atualizadas sobre os ativos cadastrados, complementando os dados registrados pelo usuário.
+
+O objetivo é centralizar informações financeiras pessoais em uma única aplicação, facilitando o controle dos gastos e o acompanhamento dos investimentos.
 
 O FinanceBook possui caráter exclusivamente informativo e organizacional. A aplicação não realizará movimentações financeiras reais, pagamentos, transferências ou operações de compra e venda de ativos.
 
@@ -24,7 +26,7 @@ O FinanceBook possui caráter exclusivamente informativo e organizacional. A apl
 
 ## 🎨 Prototipação
 
-**Figma/Stitch:** Sera usado primeiramente Stitch para uma prototipação inicial, depois o projeto será refinado usando o figma, para alterações mais específicas
+**Figma/Stitch:** Será utilizado inicialmente o Stitch para a prototipação das telas. Posteriormente, o projeto será refinado no Figma para ajustes específicos de layout e componentes.
 
 ---
 
@@ -36,28 +38,33 @@ O FinanceBook possui caráter exclusivamente informativo e organizacional. A apl
 
 ## 🧩 Framework CSS
 
-**Framework:** Bootstrap
+**Framework:** Bootstrap 5.3.8
 
 ---
 
-## 📦Tecnologias e Dependências
+## 📦 Tecnologias e Dependências
 
 As principais tecnologias e bibliotecas previstas para o projeto são:
 
-* HTML5
-* CSS3
-* JavaScript ES6+
-* Bootstrap
-* jQuery
-* Sass/SCSS
-* JSON Server
-* Node.js e NPM
+- HTML5
+- CSS3
+- JavaScript ES6+
+- Bootstrap
+- jQuery
+- Sass/SCSS
+- JSON Server
+- Node.js
+- NPM
+- Git
+- GitHub
 
 ---
 
 ## 🌐 API Pública
 
-O projeto utilizará uma API pública para obtenção de dados relacionados ao mercado financeiro, como indicadores e cotações.
+O projeto utilizará uma **API pública de cotações de ativos** para complementar as informações dos investimentos cadastrados pelo usuário.
+
+A API será utilizada para consultar a cotação atual de determinados ativos e apresentar essas informações na aplicação.
 
 **API:** A definir
 
@@ -69,54 +76,11 @@ O projeto utilizará uma API pública para obtenção de dados relacionados ao m
 
 ---
 
-# 📋 Checklist de Funcionalidades
-
-## RA1 — Utilizar Frameworks CSS para estilização de elementos HTML e criação de layouts responsivos
-
-* [ ] **ID 01** — Prototipa interfaces adaptáveis para mobile e desktop.
-* [ ] **ID 02** — Implementa layout responsivo com Framework CSS utilizando Flexbox ou Grid.
-* [ ] **ID 03** — Implementa layout responsivo com CSS puro utilizando Flexbox ou Grid Layout.
-* [ ] **ID 04** — Utiliza componentes prontos de um Framework CSS e componentes JavaScript do framework.
-* [ ] **ID 05** — Utiliza unidades relativas para criação de layouts fluidos.
-* [ ] **ID 06** — Aplica um Design System consistente.
-* [ ] **ID 07** — Utiliza Sass/SCSS com variáveis, mixins e funções.
-* [ ] **ID 08** — Aplica tipografia responsiva ou fluida.
-* [ ] **ID 09** — Utiliza técnicas de responsividade de imagens com CSS.
-* [ ] **ID 10** — Otimiza imagens utilizando formatos modernos e carregamento adaptativo.
-
-## RA2 — Realizar tratamento de formulários e aplicar validações customizadas no lado cliente
-
-* [ ] **ID 11** — Implementa validação HTML nativa.
-* [ ] **ID 12** — Utiliza expressões regulares (REGEX).
-* [ ] **ID 13** — Utiliza elementos de seleção em formulários.
-* [ ] **ID 14** — Utiliza Web Storage para persistência local.
-
-## RA3 — Aplicar ferramentas para otimização do processo de desenvolvimento web
-
-* [ ] **ID 15** — Configura ambiente com Node.js e NPM.
-* [ ] **ID 16** — Utiliza boas práticas de versionamento com Git/GitHub.
-* [ ] **ID 17** — Mantém README.md padronizado.
-* [ ] **ID 18** — Organiza os arquivos de forma modular.
-* [ ] **ID 19** — Configura linters e formatadores.
-
-## RA4 — Aplicar bibliotecas de funções e componentes em JavaScript
-
-* [ ] **ID 20** — Utiliza jQuery para manipulação do DOM e interatividade.
-* [ ] **ID 21** — Integra e configura um plugin jQuery relevante.
-
-## RA5 — Efetuar requisições assíncronas para APIs
-
-* [ ] **ID 22** — Realiza requisições assíncronas para API fake para persistência.
-* [ ] **ID 23** — Realiza requisições assíncronas para API fake para exibição.
-* [ ] **ID 24** — Realiza requisições assíncronas para uma API pública real.
-
----
-
 ## ▶️ Instruções de Execução
 
 As instruções de instalação e execução serão adicionadas conforme o desenvolvimento do projeto.
 
-Inicialmente, o projeto será executado localmente utilizando um servidor HTTP e, posteriormente, o JSON Server para persistência dos dados.
+Inicialmente, o projeto será executado localmente utilizando um servidor HTTP e o JSON Server para persistência dos dados.
 
 ---
 
@@ -124,3 +88,10 @@ Inicialmente, o projeto será executado localmente utilizando um servidor HTTP e
 
 As imagens das telas serão adicionadas durante o desenvolvimento da aplicação.
 
+Principais telas previstas:
+
+- Login
+- Cadastro
+- Dashboard
+- Gastos
+- Investimentos
