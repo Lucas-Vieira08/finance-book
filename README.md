@@ -28,7 +28,7 @@ O FinanceBook possui caráter exclusivamente informativo e organizacional. A apl
 
 
 **Figma/Stitch:** Será usado primeiramente Stitch para uma prototipação inicial, depois o projeto será refinado usando o Figma, para alterações mais específicas  
-**Protótipo:** [Stitch](https://stitch.withgoogle.com/projects/18410765180009445588)
+**Protótipo inicial:** [Stitch](https://stitch.withgoogle.com/projects/18410765180009445588)
 
 ---
 
