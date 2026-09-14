@@ -8,39 +8,61 @@ Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura
 
 ```mermaid
 erDiagram
+
     USUARIO ||--o{ GASTO : "possui"
+
     USUARIO ||--o{ INVESTIMENTO : "possui"
 
     USUARIO {
+
         string id PK "Identificador único do usuário"
+
         string nome "Nome do usuário"
+
         string email "Endereço de e-mail"
+
         string senha "Senha de acesso"
+
     }
 
     GASTO {
+
         string id PK "Identificador único do gasto"
+
         string usuarioId FK "Referência ao usuário"
+
         string descricao "Descrição do gasto"
+
         number valor "Valor do gasto"
+
         string categoria "Categoria do gasto"
+
         string data "Data do gasto"
+
     }
 
     INVESTIMENTO {
+
         string id PK "Identificador único do investimento"
+
         string usuarioId FK "Referência ao usuário"
+
         string ativo "Nome ou código do ativo"
+
         string tipo "Tipo de investimento"
+
         number quantidade "Quantidade de ativos"
+
         number valor "Valor investido"
+
         string data "Data do investimento"
+
     }
 ```
 
 O **Usuário** possui seus registros de **Gastos** e **Investimentos**. Cada registro é vinculado ao usuário por meio do campo `usuarioId`.
 
-As informações de cotação dos ativos **não serão armazenadas no banco de dados**. Esses dados serão obtidos diretamente por meio de uma **API pública** quando o usuário realizar uma consulta.
+As informações de cotação dos ativos **não serão armazenadas no banco de dados**. Esses dados serão obtidos diretamente por meio da **API pública brapi.dev** quando o usuário realizar uma consulta.
 
 ---
 
@@ -82,27 +104,51 @@ Responsável pelo registro dos investimentos do usuário.
 
 ## 3. API Pública
 
-O FinanceBook utilizará uma API pública para consultar **cotações de ativos**.
+O FinanceBook utilizará a **brapi.dev** como API pública para consulta de cotações de ativos.
 
 A API será utilizada como fonte externa de informação para complementar os dados dos investimentos cadastrados pelo usuário.
 
-O fluxo será:
+### Endpoint
+
+```text
+GET https://brapi.dev/api/v2/stocks/quote?symbols={ATIVO}
+```
+
+Exemplo:
+
+```text
+https://brapi.dev/api/v2/stocks/quote?symbols=PETR4
+```
+
+### Fluxo
 
 ```text
 Investimento cadastrado
         ↓
 Identificação do ativo
         ↓
-Requisição para API pública
+Requisição assíncrona para a brapi.dev
         ↓
-Cotação atual
+Recebimento da cotação atual
         ↓
 Exibição na aplicação
 ```
 
-A cotação obtida pela API não será armazenada como um registro permanente no banco de dados.
+Entre os dados retornados pela API, o sistema poderá utilizar:
 
-**API:** A definir
+- Código do ativo;
+- Nome do ativo;
+- Cotação atual;
+- Variação percentual.
+
+A cotação obtida pela API **não será armazenada como um registro permanente no banco de dados**.
+
+Caso a API esteja indisponível ou ocorra um erro na consulta, o sistema deverá informar o usuário sem comprometer os dados dos investimentos já cadastrados.
+
+Como o projeto possui foco no desenvolvimento front-end, não serão expostos tokens ou outras credenciais diretamente no código da aplicação.
+
+**API:** brapi.dev  
+**Endpoint:** `/api/v2/stocks/quote?symbols={ATIVO}`
 
 ---
 
