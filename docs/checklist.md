@@ -22,7 +22,7 @@
 
 ## RA3 — Aplicar ferramentas para otimização do processo de desenvolvimento web
 
-* [ ] **ID 15** — Configura ambiente com Node.js e NPM.
+* [ x ] **ID 15** — Configura ambiente com Node.js e NPM.
 * [ ] **ID 16** — Utiliza boas práticas de versionamento com Git/GitHub.
 * [ ] **ID 17** — Mantém README.md padronizado.
 * [ ] **ID 18** — Organiza os arquivos de forma modular.
