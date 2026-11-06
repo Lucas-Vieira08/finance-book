@@ -1,0 +1,59 @@
+:root {
+  --fb-primary: #0f172a;
+  --fb-secondary: #10b981;
+  --fb-error: #ef4444;
+  --fb-background: #f8fafc;
+  --fb-surface: #ffffff;
+  --fb-border: #e2e8f0;
+
+  --fb-success-bg: #ecfdf5;
+  --fb-success-text: #059669;
+  --fb-warning-bg: #fef3c7;
+  --fb-warning-text: #d97706;
+  --fb-error-bg: #fef2f2;
+  --fb-error-text: #dc2626;
+  --fb-neutral-bg: #f1f5f9;
+  --fb-neutral-text: #475569;
+
+  --fb-text: var(--fb-primary);
+  --fb-text-muted: var(--fb-neutral-text);
+
+  --fb-radius: 8px;
+  --fb-radius-pill: 9999px;
+  --fb-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+
+  --fb-container: 1280px;
+  --fb-space-1: 0.25rem;
+  --fb-space-2: 0.5rem;
+  --fb-space-3: 0.75rem;
+  --fb-space-4: 1rem;
+  --fb-space-5: 1.25rem;
+  --fb-space-6: 1.5rem;
+  --fb-space-8: 2rem;
+  --fb-space-10: 2.5rem;
+  --fb-space-12: 3rem;
+  --fb-space-16: 4rem;
+
+  --fb-font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --fb-font-display: clamp(2rem, 4vw, 3rem);
+  --fb-font-h1: 2rem;
+  --fb-font-h2: 1.5rem;
+  --fb-font-body: 0.875rem;
+  --fb-font-label: 0.75rem;
+  --fb-font-numeric: 0.875rem;
+
+  --fb-focus: #0f172a;
+  --fb-focus-inverse: #ffffff;
+
+  --bs-body-font-family: var(--fb-font-family);
+  --bs-body-font-size: var(--fb-font-body);
+  --bs-body-color: var(--fb-text);
+  --bs-body-bg: var(--fb-background);
+  --bs-border-color: var(--fb-border);
+  --bs-border-radius: var(--fb-radius);
+  --bs-link-color: var(--fb-primary);
+  --bs-link-hover-color: var(--fb-primary);
+  --bs-emphasis-color: var(--fb-primary);
+  --bs-secondary-color: var(--fb-neutral-text);
+}

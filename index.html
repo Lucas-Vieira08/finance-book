@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="FinanceBook — aplicação para organizar gastos e investimentos pessoais em um único lugar.">
+    <title>FinanceBook — Livro Financeiro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+  </head>
+  <body>
+    <a class="fb-skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="fb-header">
+      <nav class="fb-navbar" aria-label="Navegação principal">
+        <div class="fb-container">
+          <a class="fb-brand" href="index.html" aria-label="FinanceBook — página inicial">
+            <i class="bi bi-wallet2" aria-hidden="true"></i>
+            <span>FinanceBook</span>
+          </a>
+
+          <div class="fb-nav-desktop">
+            <ul class="fb-nav-links">
+              <li><a class="fb-nav-link" href="index.html#recursos">Recursos</a></li>
+              <li><a class="fb-nav-link" href="index.html#recursos-avancados">Recursos avançados</a></li>
+            </ul>
+            <div class="fb-nav-actions">
+              <a class="btn btn-outline-light" href="login.html">Entrar</a>
+              <a class="btn btn-light" href="cadastro.html">Criar conta</a>
+            </div>
+          </div>
+
+          <details class="fb-menu">
+            <summary class="fb-menu-toggle">
+              <i class="bi bi-list" aria-hidden="true"></i>
+              <span>Menu</span>
+            </summary>
+            <div class="fb-menu-panel">
+              <ul class="fb-nav-links">
+                <li><a class="fb-nav-link" href="index.html#recursos">Recursos</a></li>
+                <li><a class="fb-nav-link" href="index.html#recursos-avancados">Recursos avançados</a></li>
+              </ul>
+              <div class="fb-menu-actions">
+                <a class="btn btn-outline-light" href="login.html">Entrar</a>
+                <a class="btn btn-light" href="cadastro.html">Criar conta</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo">
+      <section class="fb-hero">
+        <div class="fb-container">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6">
+              <span class="fb-eyebrow">Organização financeira pessoal</span>
+              <h1 class="fb-hero-title">FinanceBook — Livro Financeiro</h1>
+              <p class="fb-hero-subtitle">
+                Centralize seus gastos e investimentos e acompanhe um resumo da sua situação financeira em um único lugar.
+              </p>
+              <div class="fb-hero-actions">
+                <a class="btn btn-primary btn-lg" href="cadastro.html">Criar conta</a>
+                <a class="btn btn-outline-secondary btn-lg" href="login.html">Entrar</a>
+              </div>
+              <p class="fb-hero-note">
+                Aplicação informativa e organizacional. Não realiza pagamentos, transferências ou operações reais de compra e venda de ativos.
+              </p>
+            </div>
+
+            <div class="col-lg-6">
+              <div class="fb-hero-visual">
+                <img
+                  class="fb-hero-image"
+                  src="assets/images/financebook-organizacao-640.webp"
+                  srcset="assets/images/financebook-organizacao-640.webp 640w, assets/images/financebook-organizacao-960.webp 960w, assets/images/financebook-organizacao-1280.webp 1280w"
+                  sizes="(min-width: 992px) 45vw, 92vw"
+                  width="1280"
+                  height="960"
+                  loading="eager"
+                  alt="Ilustração de um painel financeiro com gráficos de barras e de rosca, moedas e uma seta de crescimento, representando a organização de gastos e investimentos."
+                >
+
+                <div
+                  class="fb-hero-mock"
+                  role="img"
+                  aria-label="Ilustração estática de um painel do FinanceBook, com indicadores resumidos, um gráfico de barras e uma lista de lançamentos. Elementos decorativos, sem valores reais."
+                >
+                  <div class="fb-mock-stats">
+                    <span class="fb-mock-chip"><span class="fb-mock-line fb-mock-line--sm"></span><span class="fb-mock-line"></span></span>
+                    <span class="fb-mock-chip"><span class="fb-mock-line fb-mock-line--sm"></span><span class="fb-mock-line"></span></span>
+                    <span class="fb-mock-chip"><span class="fb-mock-line fb-mock-line--sm"></span><span class="fb-mock-line"></span></span>
+                  </div>
+                  <div class="fb-mock-body">
+                    <div class="fb-mock-bars" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                    <div class="fb-mock-rows">
+                      <span class="fb-mock-row"><span class="fb-mock-dot"></span><span class="fb-mock-line"></span></span>
+                      <span class="fb-mock-row"><span class="fb-mock-dot"></span><span class="fb-mock-line fb-mock-line--md"></span></span>
+                      <span class="fb-mock-row"><span class="fb-mock-dot"></span><span class="fb-mock-line"></span></span>
+                      <span class="fb-mock-row"><span class="fb-mock-dot"></span><span class="fb-mock-line fb-mock-line--md"></span></span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="fb-card fb-hero-overlay">
+                  <div class="fb-card-body">
+                    <span class="fb-overlay-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></span>
+                    <div class="fb-overlay-text">
+                      <strong>Painel FinanceBook</strong>
+                      <span>Demonstração ilustrativa</span>
+                    </div>
+                    <div class="fb-overlay-bars" aria-hidden="true">
+                      <span></span><span></span><span></span><span></span><span></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <p class="fb-hero-visual-note">
+                Ilustração estática: os gráficos mostram apenas a composição do painel, sem nenhum dado financeiro real.
+              </p>
+            </div>
+          </div>
+
+          <ul class="fb-hero-indicators" aria-label="Indicadores de confiança">
+            <li class="fb-indicator">
+              <span class="fb-indicator-icon"><i class="bi bi-journal-bookmark" aria-hidden="true"></i></span>
+              <div>
+                <span class="fb-indicator-title">Um só lugar</span>
+                <span class="fb-indicator-text">Gastos e investimentos organizados.</span>
+              </div>
+            </li>
+            <li class="fb-indicator">
+              <span class="fb-indicator-icon"><i class="bi bi-shield-check" aria-hidden="true"></i></span>
+              <div>
+                <span class="fb-indicator-title">Sem operações reais</span>
+                <span class="fb-indicator-text">Não realiza pagamentos nem transferências.</span>
+              </div>
+            </li>
+            <li class="fb-indicator">
+              <span class="fb-indicator-icon"><i class="bi bi-cloud-arrow-down" aria-hidden="true"></i></span>
+              <div>
+                <span class="fb-indicator-title">Cotações complementares</span>
+                <span class="fb-indicator-text">Consulta de ativos via brapi.dev.</span>
+              </div>
+            </li>
+            <li class="fb-indicator">
+              <span class="fb-indicator-icon"><i class="bi bi-phone" aria-hidden="true"></i></span>
+              <div>
+                <span class="fb-indicator-title">Acesso responsivo</span>
+                <span class="fb-indicator-text">Layout para desktop, tablet e celular.</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="fb-section fb-section--muted" id="recursos">
+        <div class="fb-container">
+          <div class="fb-section-header fb-section-header--center">
+            <h2>Ferramentas de organização pessoal</h2>
+            <p>O FinanceBook reúne as ferramentas necessárias para registrar e acompanhar seus gastos e investimentos.</p>
+          </div>
+
+          <div class="row row-cols-1 row-cols-md-2 g-4">
+            <article class="col">
+              <div class="fb-card fb-feature-card h-100">
+                <div class="fb-card-body">
+                  <span class="fb-feature-icon"><i class="bi bi-receipt" aria-hidden="true"></i></span>
+                  <h3>Controle de gastos</h3>
+                  <p>Registre descrição, valor, categoria e data das suas despesas.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="fb-card fb-feature-card h-100">
+                <div class="fb-card-body">
+                  <span class="fb-feature-icon"><i class="bi bi-graph-up-arrow" aria-hidden="true"></i></span>
+                  <h3>Carteira de investimentos</h3>
+                  <p>Cadastre ativo, tipo, quantidade, valor investido e data.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="fb-card fb-feature-card h-100">
+                <div class="fb-card-body">
+                  <span class="fb-feature-icon"><i class="bi bi-search" aria-hidden="true"></i></span>
+                  <h3>Cotações de ativos</h3>
+                  <p>Acompanhe a cotação atual dos ativos cadastrados com dados da brapi.dev.</p>
+                </div>
+              </div>
+            </article>
+
+            <article class="col">
+              <div class="fb-card fb-feature-card h-100">
+                <div class="fb-card-body">
+                  <span class="fb-feature-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
+                  <h3>Dashboard financeiro</h3>
+                  <p>Visualize o total de gastos, o total investido e a distribuição por categoria.</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="fb-section" id="recursos-avancados">
+        <div class="fb-container">
+          <div class="row g-4 g-lg-5 align-items-center">
+            <div class="col-lg-6">
+              <span class="fb-eyebrow">Análise e acompanhamento</span>
+              <h2>Recursos avançados</h2>
+              <p class="fb-section-text">Além do registro simples, o FinanceBook organiza suas informações para análise, com resumo consolidado e cotações complementares.</p>
+              <ul class="fb-adv-list">
+                <li>
+                  <span class="fb-adv-icon"><i class="bi bi-speedometer2" aria-hidden="true"></i></span>
+                  <div>
+                    <strong>Resumo consolidado</strong>
+                    <span>Totais de gastos e investimentos reunidos no dashboard.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="fb-adv-icon"><i class="bi bi-bar-chart-line" aria-hidden="true"></i></span>
+                  <div>
+                    <strong>Distribuição por categoria</strong>
+                    <span>Veja como suas despesas se distribuem entre as categorias.</span>
+                  </div>
+                </li>
+                <li>
+                  <span class="fb-adv-icon"><i class="bi bi-coin" aria-hidden="true"></i></span>
+                  <div>
+                    <strong>Cotações complementares</strong>
+                    <span>Referência atualizada de ativos via brapi.dev.</span>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6">
+              <div class="fb-card fb-adv-visual">
+                <div class="fb-card-body">
+                  <div class="fb-panel-header">
+                    <span class="fb-label">Prévia do dashboard</span>
+                    <i class="bi bi-bar-chart-line" aria-hidden="true"></i>
+                  </div>
+                  <div class="fb-chart-placeholder">
+                    <div class="fb-chart-donut" aria-hidden="true"></div>
+                    <ul class="fb-chart-legend" aria-label="Conteúdo do gráfico">
+                      <li><span class="fb-chart-dot" aria-hidden="true"></span>Gastos por categoria</li>
+                      <li><span class="fb-chart-dot" aria-hidden="true"></span>Total investido</li>
+                      <li><span class="fb-chart-dot" aria-hidden="true"></span>Cotações de ativos</li>
+                    </ul>
+                  </div>
+                  <p class="fb-adv-visual-note">Prévia ilustrativa da composição do dashboard. Os dados serão exibidos após a implementação funcional.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fb-section">
+        <div class="fb-container">
+          <div class="fb-cta-band">
+            <div>
+              <h2>Comece a organizar suas finanças</h2>
+              <p>Crie sua conta e centralize seus gastos e investimentos no FinanceBook.</p>
+            </div>
+            <div class="fb-cta-actions">
+              <a class="btn btn-success" href="cadastro.html">Criar conta</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="fb-footer">
+      <div class="fb-container">
+        <div class="fb-footer-content">
+          <div>
+            <a class="fb-footer-brand" href="index.html">
+              <i class="bi bi-wallet2" aria-hidden="true"></i>
+              <span>FinanceBook</span>
+            </a>
+            <p class="fb-footer-text">Livro financeiro para organizar gastos e investimentos em um único lugar.</p>
+          </div>
+          <nav class="fb-footer-nav" aria-label="Navegação do rodapé">
+            <ul class="fb-footer-links">
+              <li><a href="index.html#recursos">Recursos</a></li>
+              <li><a href="index.html#recursos-avancados">Recursos avançados</a></li>
+            </ul>
+          </nav>
+          <p class="fb-footer-note">Projeto acadêmico — Sistemas para Internet.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

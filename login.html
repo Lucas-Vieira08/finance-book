@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Acesse sua conta do FinanceBook para organizar seus gastos e investimentos.">
+  <title>Entrar — FinanceBook</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="assets/css/tokens.css">
+  <link rel="stylesheet" href="assets/css/base.css">
+  <link rel="stylesheet" href="assets/css/layout.css">
+  <link rel="stylesheet" href="assets/css/components.css">
+  <link rel="stylesheet" href="assets/css/pages.css">
+</head>
+
+<body>
+  <a class="fb-skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <header class="fb-header">
+    <nav class="fb-navbar" aria-label="Navegação principal">
+      <div class="fb-container">
+        <a class="fb-brand" href="index.html" aria-label="FinanceBook — página inicial">
+          <i class="bi bi-wallet2" aria-hidden="true"></i>
+          <span>FinanceBook</span>
+        </a>
+
+        <div class="fb-nav-desktop">
+          <ul class="fb-nav-links">
+            <li><a class="fb-nav-link" href="index.html#recursos">Recursos</a></li>
+            <li><a class="fb-nav-link" href="index.html#recursos-avancados">Recursos avançados</a></li>
+          </ul>
+          <div class="fb-nav-actions">
+            <a class="btn btn-outline-light" href="login.html" aria-current="page">Entrar</a>
+            <a class="btn btn-light" href="cadastro.html">Criar conta</a>
+          </div>
+        </div>
+
+        <details class="fb-menu">
+          <summary class="fb-menu-toggle">
+            <i class="bi bi-list" aria-hidden="true"></i>
+            <span>Menu</span>
+          </summary>
+          <div class="fb-menu-panel">
+            <ul class="fb-nav-links">
+              <li><a class="fb-nav-link" href="index.html#recursos">Recursos</a></li>
+              <li><a class="fb-nav-link" href="index.html#recursos-avancados">Recursos avançados</a></li>
+            </ul>
+            <div class="fb-menu-actions">
+              <a class="btn btn-outline-light" href="login.html" aria-current="page">Entrar</a>
+              <a class="btn btn-light" href="cadastro.html">Criar conta</a>
+            </div>
+          </div>
+        </details>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="fb-auth">
+    <div class="fb-container">
+      <div class="row g-4 g-lg-5 align-items-center fb-auth-layout">
+        <aside class="col-lg-6 fb-auth-aside">
+          <span class="fb-eyebrow">FinanceBook</span>
+          <p class="fb-auth-headline">Organize suas finanças em um único lugar.</p>
+          <p class="fb-auth-description">
+            Registre seus gastos, acompanhe seus investimentos e consulte um resumo da sua situação financeira.
+          </p>
+          <ul class="fb-auth-points">
+            <li><i class="bi bi-receipt" aria-hidden="true"></i><span>Controle de gastos por categoria e período.</span>
+            </li>
+            <li><i class="bi bi-graph-up-arrow" aria-hidden="true"></i><span>Acompanhamento da carteira de
+                investimentos.</span></li>
+            <li><i class="bi bi-speedometer2" aria-hidden="true"></i><span>Visão geral no dashboard financeiro.</span>
+            </li>
+          </ul>
+        </aside>
+
+        <section class="col-lg-6 fb-card fb-auth-card" aria-labelledby="login-title">
+          <div class="fb-card-body">
+            <h1 id="login-title" class="fb-auth-title">Entrar</h1>
+            <p class="fb-auth-subtitle">Acesse sua conta para visualizar seus gastos e investimentos.</p>
+
+            <form action="dashboard.html">
+              <div class="mb-3">
+                <label class="form-label" for="login-email">E-mail</label>
+                <input class="form-control" id="login-email" name="email" type="email" autocomplete="email"
+                  placeholder="voce@exemplo.com" required>
+              </div>
+              <div class="mb-3">
+                <label class="form-label" for="login-senha">Senha</label>
+                <input class="form-control" id="login-senha" name="senha" type="password"
+                  autocomplete="current-password" required>
+              </div>
+              <button class="btn btn-primary w-100" type="submit">Entrar</button>
+            </form>
+
+            <p class="fb-auth-switch">Ainda não tem conta? <a href="cadastro.html">Criar conta</a></p>
+            <p class="fb-auth-note">Interface visual: a autenticação será implementada em etapa futura.</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <footer class="fb-footer">
+    <div class="fb-container">
+      <div class="fb-footer-content">
+        <div>
+          <a class="fb-footer-brand" href="index.html">
+            <i class="bi bi-wallet2" aria-hidden="true"></i>
+            <span>FinanceBook</span>
+          </a>
+          <p class="fb-footer-text">Livro financeiro para organizar gastos e investimentos em um único lugar.</p>
+        </div>
+        <p class="fb-footer-note">Projeto acadêmico — Sistemas para Internet.</p>
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

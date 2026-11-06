@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Cadastro e edição de gastos no FinanceBook.">
+    <title>Gasto — FinanceBook</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/vendor/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/vendor/bootstrap-icons/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/tokens.css">
+    <link rel="stylesheet" href="assets/css/base.css">
+    <link rel="stylesheet" href="assets/css/layout.css">
+    <link rel="stylesheet" href="assets/css/components.css">
+    <link rel="stylesheet" href="assets/css/pages.css">
+  </head>
+  <body>
+    <a class="fb-skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+    <header class="fb-header">
+      <nav class="fb-navbar" aria-label="Navegação principal">
+        <div class="fb-container">
+          <a class="fb-brand" href="index.html" aria-label="FinanceBook — página inicial">
+            <i class="bi bi-wallet2" aria-hidden="true"></i>
+            <span>FinanceBook</span>
+          </a>
+
+          <div class="fb-nav-desktop">
+            <ul class="fb-nav-links">
+              <li><a class="fb-nav-link" href="dashboard.html">Dashboard</a></li>
+              <li><a class="fb-nav-link" href="gastos.html" aria-current="page">Gastos</a></li>
+              <li><a class="fb-nav-link" href="investimentos.html">Investimentos</a></li>
+            </ul>
+            <div class="fb-nav-actions">
+              <a class="btn btn-light" href="login.html">Sair</a>
+            </div>
+          </div>
+
+          <details class="fb-menu">
+            <summary class="fb-menu-toggle">
+              <i class="bi bi-list" aria-hidden="true"></i>
+              <span>Menu</span>
+            </summary>
+            <div class="fb-menu-panel">
+              <ul class="fb-nav-links">
+                <li><a class="fb-nav-link" href="dashboard.html">Dashboard</a></li>
+                <li><a class="fb-nav-link" href="gastos.html" aria-current="page">Gastos</a></li>
+                <li><a class="fb-nav-link" href="investimentos.html">Investimentos</a></li>
+              </ul>
+              <div class="fb-menu-actions">
+                <a class="btn btn-light" href="login.html">Sair</a>
+              </div>
+            </div>
+          </details>
+        </div>
+      </nav>
+    </header>
+
+    <main id="conteudo" class="fb-app-main">
+      <div class="fb-container">
+        <div class="fb-page-header">
+          <div>
+            <h1 class="fb-page-title">Gasto</h1>
+            <p class="fb-page-subtitle">Cadastro e edição de despesas.</p>
+          </div>
+          <div class="fb-page-actions">
+            <a class="btn btn-outline-secondary" href="gastos.html">
+              <i class="bi bi-arrow-left" aria-hidden="true"></i>
+              Voltar para gastos
+            </a>
+          </div>
+        </div>
+
+        <section class="fb-card fb-form-card" aria-labelledby="gasto-form-title">
+          <div class="fb-card-body">
+            <h2 id="gasto-form-title" class="fb-card-title">Dados do gasto</h2>
+            <p class="fb-card-subtitle">Informe os dados da despesa que deseja registrar.</p>
+
+            <form>
+              <div class="row g-3">
+                <div class="col-12">
+                  <label class="form-label" for="gasto-descricao">Descrição</label>
+                  <input class="form-control" id="gasto-descricao" name="descricao" type="text" placeholder="Ex.: Supermercado" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="gasto-valor">Valor (R$)</label>
+                  <input class="form-control" id="gasto-valor" name="valor" type="number" min="0" step="0.01" inputmode="decimal" required>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="gasto-categoria">Categoria</label>
+                  <select class="form-select" id="gasto-categoria" name="categoria" required>
+                    <option value="" selected disabled>Selecione uma categoria</option>
+                    <option value="alimentacao">Alimentação</option>
+                    <option value="transporte">Transporte</option>
+                    <option value="moradia">Moradia</option>
+                    <option value="lazer">Lazer</option>
+                  </select>
+                </div>
+
+                <div class="col-12 col-md-6">
+                  <label class="form-label" for="gasto-data">Data</label>
+                  <input class="form-control" id="gasto-data" name="data" type="date" required>
+                </div>
+              </div>
+
+              <div class="fb-form-actions">
+                <button class="btn btn-primary" type="button">Salvar gasto</button>
+                <a class="btn btn-outline-secondary" href="gastos.html">Cancelar</a>
+              </div>
+              <p class="fb-form-note">Interface visual: o gasto será processado após a implementação funcional.</p>
+            </form>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="fb-footer">
+      <div class="fb-container">
+        <div class="fb-footer-content">
+          <div>
+            <a class="fb-footer-brand" href="index.html">
+              <i class="bi bi-wallet2" aria-hidden="true"></i>
+              <span>FinanceBook</span>
+            </a>
+            <p class="fb-footer-text">Livro financeiro para organizar gastos e investimentos em um único lugar.</p>
+          </div>
+          <p class="fb-footer-note">Projeto acadêmico — Sistemas para Internet.</p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,153 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--fb-font-family);
+  font-size: var(--fb-font-body);
+  line-height: 1.5;
+  color: var(--fb-text);
+  background-color: var(--fb-background);
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+main[id],
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--fb-text);
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: var(--fb-font-h1);
+}
+
+h2 {
+  font-size: var(--fb-font-h2);
+}
+
+p {
+  margin-top: 0;
+}
+
+a {
+  color: var(--fb-primary);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}
+
+a:hover {
+  color: var(--fb-primary);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+hr {
+  border-color: var(--fb-border);
+  opacity: 1;
+}
+
+::selection {
+  color: var(--fb-surface);
+  background-color: var(--fb-primary);
+}
+
+:focus-visible {
+  outline: 2px solid var(--fb-focus);
+  outline-offset: 2px;
+}
+
+.fb-navbar :focus-visible,
+.fb-menu-panel :focus-visible,
+.fb-cta-band :focus-visible {
+  outline-color: var(--fb-focus-inverse);
+}
+
+.fb-navbar .btn:focus-visible,
+.fb-menu-panel .btn:focus-visible,
+.fb-cta-band .btn:focus-visible {
+  outline-color: var(--fb-focus-inverse);
+}
+
+.fb-display {
+  font-size: var(--fb-font-display);
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+.fb-label {
+  font-size: var(--fb-font-label);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.fb-numeric {
+  font-size: var(--fb-font-numeric);
+  font-variant-numeric: tabular-nums;
+}
+
+.fb-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--fb-space-3);
+  color: var(--fb-text-muted);
+  font-size: var(--fb-font-label);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.fb-text-muted {
+  color: var(--fb-text-muted);
+}
+
+.fb-skip-link {
+  position: fixed;
+  top: -100%;
+  left: var(--fb-space-4);
+  z-index: 2000;
+  padding: var(--fb-space-3) var(--fb-space-4);
+  color: var(--fb-surface);
+  background-color: var(--fb-primary);
+  border-radius: var(--fb-radius);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.fb-skip-link:focus {
+  top: var(--fb-space-4);
+  color: var(--fb-surface);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
