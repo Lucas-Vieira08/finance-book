@@ -106,7 +106,8 @@
 ### Cotações
 
 - Card com ativo, cotação atual e variação
-- Dados obtidos através da API `brapi.dev`
+- Integração com a API pública `brapi.dev` prevista para a etapa final/funcional
+- Consulta de cotações ainda não implementada nesta entrega
 - Exibir feedback caso a API esteja indisponível
 
 ---
@@ -124,6 +125,7 @@
 **Breakpoints:**
 
 - Mobile: `< 768px`
+- Mobile ampliado: `576px – 767px` — a partir de 576px, o grid de indicadores passa a usar 2 colunas
 - Tablet: `768px – 991px`
 - Desktop: `≥ 992px`
 

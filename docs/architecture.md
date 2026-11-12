@@ -1,10 +1,12 @@
 # 🛠️ Especificação Técnica (Tech Spec) - FinanceBook
 
-Este documento descreve a estrutura de dados e as principais tecnologias utilizadas na aplicação **FinanceBook — Livro Financeiro**.
+Este documento descreve a estrutura de dados prevista e as principais tecnologias do projeto **FinanceBook — Livro Financeiro**.
 
 ## 1. Modelo de Dados (Diagrama ER)
 
-Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura do FinanceBook.
+> **Planejamento:** o modelo de dados abaixo está previsto para a etapa final/funcional. Não há persistência de dados implementada na Entrega 2.
+
+Abaixo está o Diagrama Entidade-Relacionamento (DER) que representa a estrutura prevista do FinanceBook.
 
 ```mermaid
 erDiagram
@@ -60,13 +62,15 @@ erDiagram
     }
 ```
 
-O **Usuário** possui seus registros de **Gastos** e **Investimentos**. Cada registro é vinculado ao usuário por meio do campo `usuarioId`.
+No modelo previsto, o **Usuário** possui seus registros de **Gastos** e **Investimentos**. Cada registro é vinculado ao usuário por meio do campo `usuarioId`.
 
 As informações de cotação dos ativos **não serão armazenadas no banco de dados**. Esses dados serão obtidos diretamente por meio da **API pública brapi.dev** quando o usuário realizar uma consulta.
 
 ---
 
 ## 2. Dicionário de Dados
+
+As estruturas descritas nesta seção estão previstas para a etapa final/funcional e não estão implementadas na Entrega 2.
 
 ### Usuário
 
@@ -104,9 +108,9 @@ Responsável pelo registro dos investimentos do usuário.
 
 ## 3. API Pública
 
-O FinanceBook utilizará a **brapi.dev** como API pública para consulta de cotações de ativos.
+O FinanceBook prevê a utilização da **brapi.dev** como API pública para consulta de cotações de ativos.
 
-A API será utilizada como fonte externa de informação para complementar os dados dos investimentos cadastrados pelo usuário.
+A API será utilizada como fonte externa de informação para complementar os dados dos investimentos cadastrados pelo usuário. Essa integração está prevista para a etapa funcional e **não está implementada nesta entrega**.
 
 ### Endpoint
 
@@ -155,13 +159,24 @@ Como o projeto possui foco no desenvolvimento front-end, não serão expostos to
 ## 4. Tecnologias
 
 - **HTML5**
-- **CSS3**
+- **CSS puro (CSS3)**
 - **Bootstrap 5.3.8**
-- **Sass/SCSS**
-- **JavaScript ES6+**
-- **jQuery**
-- **JSON Server**
+- **JavaScript ES6+** — lógica da aplicação prevista para a etapa final/funcional.
+- **jQuery** — instalado como dependência, mas ainda não utilizado; uso previsto para a etapa funcional (manipulação do DOM e interatividade).
+- **JSON Server** — previsto para a etapa final/funcional (persistência de dados).
 - **Node.js**
 - **NPM**
 - **Git**
 - **GitHub**
+
+A lógica JavaScript da aplicação e a persistência dos dados serão desenvolvidas na etapa final/funcional. Nesta entrega, a aplicação contempla a estrutura visual e responsiva.
+
+### Arquitetura CSS
+
+O projeto utiliza **CSS puro**, organizado nos seguintes arquivos:
+
+- `assets/css/tokens.css`: variáveis de design (cores, tipografia, espaçamento e demais tokens).
+- `assets/css/base.css`: estilos base e normalizações.
+- `assets/css/layout.css`: estrutura e layout responsivo com Flexbox e Grid.
+- `assets/css/components.css`: componentes reutilizáveis da interface.
+- `assets/css/pages.css`: estilos específicos das páginas.
